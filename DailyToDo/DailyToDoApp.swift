@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct DailyToDoApp: App {
+    @State private var store = DayStore()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(store: store)
         }
     }
 }
